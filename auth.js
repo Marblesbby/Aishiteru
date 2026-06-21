@@ -1,6 +1,6 @@
 import { supabase } from './supabase-client.js';
 
-// Call at the top of every page JS file.
+// Call at the top of every page JS file..
 // Returns the session if valid, otherwise redirects to login.
 export async function requireAuth() {
   const { data: { session } } = await supabase.auth.getSession();
