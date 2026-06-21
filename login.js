@@ -1,7 +1,7 @@
 import { supabase } from '../supabase-client.js';
 import { applyTheme } from '../theme.js';
 
-// If already logged in, go straight to stories
+// If already logged in, go straight to stories.
 const { data: { session } } = await supabase.auth.getSession();
 if (session) {
   window.location.href = '/pages/stories.html';
