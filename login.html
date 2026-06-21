@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aishiteru · Sign in</title>
+  <link rel="stylesheet" href="../css/reset.css">
+  <link rel="stylesheet" href="../css/themes.css">
+  <link rel="stylesheet" href="../css/base.css">
+  <link rel="stylesheet" href="../css/components.css">
+  <link rel="stylesheet" href="../css/pages/login.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
+</head>
+<body class="theme-haru_urara">
+
+  <div class="login-shell">
+
+    <div class="login-top">
+      <div class="login-logo">愛してる</div>
+      <div class="login-sub">Aishiteru</div>
+    </div>
+
+    <div class="login-card">
+
+      <div id="error-msg" class="error-msg hidden"></div>
+
+      <div class="field-group">
+        <label class="field-label" for="email">EMAIL</label>
+        <input
+          class="field-input"
+          type="email"
+          id="email"
+          autocomplete="email"
+          placeholder="your@email.com"
+        >
+      </div>
+
+      <div class="field-group">
+        <label class="field-label" for="password">PASSWORD</label>
+        <input
+          class="field-input"
+          type="password"
+          id="password"
+          autocomplete="current-password"
+          placeholder="••••••••"
+        >
+      </div>
+
+      <button class="btn-primary" id="sign-in-btn">
+        <i class="ti ti-heart" aria-hidden="true"></i>
+        Sign in
+      </button>
+
+    </div>
+
+    <div class="login-footer">Private · just for us ♥</div>
+
+  </div>
+
+  <script type="module" src="../js/pages/login.js"></script>
+</body>
+</html>
