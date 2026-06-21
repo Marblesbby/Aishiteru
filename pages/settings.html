@@ -15,55 +15,12 @@
 
   <div class="app-shell">
 
+    <!-- Mobile header -->
     <header class="app-header">
       <span class="logo">Aishiteru</span>
     </header>
 
-    <main class="page-content">
-
-      <div class="settings-section">
-        <div class="settings-label">YOUR THEME</div>
-        <div class="theme-note">Your theme is yours alone — your partner picks their own.</div>
-
-        <div class="theme-grid" id="theme-grid">
-          <div class="swatch-col" data-theme="haru_urara">
-            <div class="swatch-ring" style="background:#FA7395;"></div>
-            <div class="swatch-lbl">Haru Urara</div>
-          </div>
-          <div class="swatch-col" data-theme="teto">
-            <div class="swatch-ring" style="background:#d46a83;"></div>
-            <div class="swatch-lbl">Teto</div>
-          </div>
-          <div class="swatch-col" data-theme="brazilian_miku">
-            <div class="swatch-ring" style="background:#286a41;"></div>
-            <div class="swatch-lbl">Brazilian Miku</div>
-          </div>
-          <div class="swatch-col" data-theme="slice_of_life">
-            <div class="swatch-ring" style="background:#5F86CE;"></div>
-            <div class="swatch-lbl">Slice of Life</div>
-          </div>
-        </div>
-      </div>
-
-      <div class="settings-section">
-        <div class="settings-label">DISPLAY NAME</div>
-        <div class="field-group">
-          <input class="field-input" type="text" id="display-name" placeholder="Your name">
-        </div>
-        <button class="btn-primary" id="save-name-btn" style="margin-top:10px;">
-          Save name
-        </button>
-      </div>
-
-      <div class="settings-section">
-        <button class="btn-outline" id="sign-out-btn">
-          <i class="ti ti-logout" aria-hidden="true"></i>
-          Sign out
-        </button>
-      </div>
-
-    </main>
-
+    <!-- Sidebar / bottom nav -->
     <nav class="bottom-nav">
       <a href="/Aishiteru/pages/stories.html" class="nav-item">
         <i class="ti ti-books" aria-hidden="true"></i>
@@ -78,6 +35,61 @@
         <span>settings</span>
       </a>
     </nav>
+
+    <main class="page-content">
+
+      <!-- Desktop page header -->
+      <div class="desktop-header">
+        <span class="desktop-header-title">Settings</span>
+      </div>
+
+      <div class="settings-wrap">
+
+        <div class="settings-section">
+          <div class="settings-label">YOUR THEME</div>
+          <div class="theme-note">Your theme is yours alone — your partner picks their own.</div>
+          <div class="theme-grid" id="theme-grid">
+            <div class="swatch-col" data-theme="haru_urara">
+              <div class="swatch-ring" style="background:#FA7395;"></div>
+              <div class="swatch-lbl">Haru Urara</div>
+            </div>
+            <div class="swatch-col" data-theme="teto">
+              <div class="swatch-ring" style="background:#d46a83;"></div>
+              <div class="swatch-lbl">Teto</div>
+            </div>
+            <div class="swatch-col" data-theme="brazilian_miku">
+              <div class="swatch-ring" style="background:#286a41;"></div>
+              <div class="swatch-lbl">Brazilian Miku</div>
+            </div>
+            <div class="swatch-col" data-theme="slice_of_life">
+              <div class="swatch-ring" style="background:#5F86CE;"></div>
+              <div class="swatch-lbl">Slice of Life</div>
+            </div>
+          </div>
+          <div id="theme-saved" class="theme-saved-msg hidden">Theme saved ✓</div>
+        </div>
+
+        <div class="settings-section">
+          <div class="settings-label">DISPLAY NAME</div>
+          <p class="settings-hint">Shown when you post out of character in a story.</p>
+          <div class="field-group">
+            <input class="field-input" type="text" id="display-name" placeholder="Your name">
+          </div>
+          <button class="btn-primary" id="save-name-btn">Save name</button>
+          <div id="name-saved" class="theme-saved-msg hidden">Name saved ✓</div>
+        </div>
+
+        <div class="settings-section">
+          <div class="settings-label">ACCOUNT</div>
+          <button class="btn-outline" id="sign-out-btn">
+            <i class="ti ti-logout" aria-hidden="true"></i>
+            Sign out
+          </button>
+        </div>
+
+      </div>
+
+    </main>
 
   </div>
 

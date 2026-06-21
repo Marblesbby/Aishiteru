@@ -11,11 +11,15 @@ const userId = session.user.id;
 const activeList   = document.getElementById('active-stories');
 const proposedList = document.getElementById('proposed-stories');
 const proposedRow  = document.getElementById('proposed-section-row');
-const newStoryBtn  = document.getElementById('new-story-btn');
+const newStoryBtn       = document.getElementById('new-story-btn');
+const newStoryBtnMobile = document.getElementById('new-story-btn-mobile');
 
-newStoryBtn.addEventListener('click', () => {
+function goToPropose() {
   window.location.href = '/Aishiteru/pages/propose.html';
-});
+}
+
+if (newStoryBtn)       newStoryBtn.addEventListener('click', goToPropose);
+if (newStoryBtnMobile) newStoryBtnMobile.addEventListener('click', goToPropose);
 
 // ── LOAD STORIES ─────────────────────────────────────────────
 

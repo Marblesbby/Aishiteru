@@ -2,13 +2,12 @@
   display: flex;
   flex-direction: column;
   gap: 10px;
-  padding: 0 14px 10px;
+  padding: 0 16px 10px;
 }
 
-/* Plus button in section header */
 .plus-btn {
-  width: 26px;
-  height: 26px;
+  width: 28px;
+  height: 28px;
   border-radius: 50%;
   background: var(--ac);
   display: flex;
@@ -21,18 +20,23 @@
 }
 
 .plus-btn:hover { opacity: 0.85; }
-.plus-btn i { font-size: 16px; color: #fff; }
+.plus-btn i { font-size: 17px; color: #fff; }
 
-/* Story card overrides for this page */
-.story-card {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  padding: 12px 14px;
-  text-decoration: none;
-  color: inherit;
-}
+.mobile-only { display: flex; }
 
-.story-card-inner {
-  display: contents;
+@media (min-width: 768px) {
+  .mobile-only { display: none; }
+
+  .stories-list {
+    padding: 0 28px 20px;
+    gap: 12px;
+  }
+
+  .story-card {
+    padding: 16px 18px;
+    border-radius: 16px;
+  }
+
+  .story-title { font-size: 15px; }
+  .story-summary { font-size: 13px; }
 }

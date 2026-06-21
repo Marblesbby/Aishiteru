@@ -15,41 +15,17 @@
 
   <div class="app-shell">
 
+    <!-- Mobile header -->
     <header class="app-header">
       <span class="logo">Aishiteru</span>
       <div class="hdr-right">
-        <a href="/Aishiteru/pages/shelf.html" class="hdr-icon" title="Bookshelf">
-          <i class="ti ti-library" aria-hidden="true"></i>
-        </a>
         <a href="/Aishiteru/pages/settings.html" class="hdr-icon" title="Settings">
           <i class="ti ti-settings" aria-hidden="true"></i>
         </a>
       </div>
     </header>
 
-    <main class="page-content">
-
-      <!-- LOVE STORIES -->
-      <div class="section-row">
-        <span class="section-lbl">✦ love stories</span>
-        <button class="plus-btn" id="new-story-btn" title="Propose a new story">
-          <i class="ti ti-plus" aria-hidden="true"></i>
-        </button>
-      </div>
-
-      <div class="stories-list" id="active-stories">
-        <div class="loading-state">Loading your stories...</div>
-      </div>
-
-      <!-- PROPOSED -->
-      <div class="section-row" id="proposed-section-row" style="display:none;">
-        <span class="section-lbl">💌 proposed</span>
-      </div>
-
-      <div class="stories-list" id="proposed-stories"></div>
-
-    </main>
-
+    <!-- Sidebar nav (desktop) / bottom nav (mobile) -->
     <nav class="bottom-nav">
       <a href="/Aishiteru/pages/stories.html" class="nav-item active">
         <i class="ti ti-books" aria-hidden="true"></i>
@@ -64,6 +40,39 @@
         <span>settings</span>
       </a>
     </nav>
+
+    <main class="page-content">
+
+      <!-- Desktop page header -->
+      <div class="desktop-header">
+        <span class="desktop-header-title">Love Stories</span>
+        <div class="desktop-header-actions">
+          <button class="btn-primary" id="new-story-btn" style="width:auto; padding: 10px 18px;">
+            <i class="ti ti-plus" aria-hidden="true"></i>
+            New story
+          </button>
+        </div>
+      </div>
+
+      <!-- Mobile section header -->
+      <div class="section-row mobile-only">
+        <span class="section-lbl">✦ love stories</span>
+        <button class="plus-btn" id="new-story-btn-mobile" title="Propose a new story">
+          <i class="ti ti-plus" aria-hidden="true"></i>
+        </button>
+      </div>
+
+      <div class="stories-list" id="active-stories">
+        <div class="loading-state">Loading your stories...</div>
+      </div>
+
+      <div class="section-row" id="proposed-section-row" style="display:none;">
+        <span class="section-lbl">💌 proposed</span>
+      </div>
+
+      <div class="stories-list" id="proposed-stories"></div>
+
+    </main>
 
   </div>
 
