@@ -1,11 +1,11 @@
 import { supabase } from './supabase-client.js';
 
-// Call at the top of every page JS file..
+// Call at the top of every page JS file.
 // Returns the session if valid, otherwise redirects to login.
 export async function requireAuth() {
   const { data: { session } } = await supabase.auth.getSession();
   if (!session) {
-    window.location.href = '/pages/login.html';
+    window.location.href = '/Aishiteru/pages/login.html';
     return null;
   }
   return session;
@@ -35,5 +35,5 @@ export async function signIn(email, password) {
 // Sign out and redirect to login.
 export async function signOut() {
   await supabase.auth.signOut();
-  window.location.href = '/pages/login.html';
+  window.location.href = '/Aishiteru/pages/login.html';
 }

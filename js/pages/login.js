@@ -1,10 +1,10 @@
 import { supabase } from '../supabase-client.js';
 import { applyTheme } from '../theme.js';
 
-// If already logged in, go straight to stories.
+// If already logged in, go straight to stories
 const { data: { session } } = await supabase.auth.getSession();
 if (session) {
-  window.location.href = '/pages/stories.html';
+  window.location.href = '/Aishiteru/pages/stories.html';
 }
 
 const emailInput  = document.getElementById('email');
@@ -45,7 +45,7 @@ signInBtn.addEventListener('click', async () => {
 
   // Apply their saved theme before redirect
   await applyTheme();
-  window.location.href = '/pages/stories.html';
+  window.location.href = '/Aishiteru/pages/stories.html';
 });
 
 // Allow Enter key to submit

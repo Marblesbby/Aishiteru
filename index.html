@@ -7,9 +7,9 @@
     import { supabase } from './js/supabase-client.js';
     const { data: { session } } = await supabase.auth.getSession();
     window.location.href = session
-      ? '/pages/stories.html'
-      : '/pages/login.html';
+      ? '/Aishiteru/pages/stories.html'
+      : '/Aishiteru/pages/login.html';
   </script>
 </head>
-<body></body> 
-</html> 
+<body></body>
+</html>
