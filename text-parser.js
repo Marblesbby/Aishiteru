@@ -6,7 +6,7 @@
 // plain   → rendered as-is
 //
 // Colors come from CSS custom properties in themes.css,
-// so the output automatically matches whichever theme is active.
+// so the output automatically matches whichever theme is active..
 
 export function parseMessage(raw) {
   if (!raw) return '';
