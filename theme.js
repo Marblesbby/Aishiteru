@@ -17,7 +17,7 @@ export async function applyTheme() {
   setThemeClass(theme);
 }
 
-// Saves chosen theme to the DB and applies it immediately.
+// Saves chosen theme to the DB and applies it immediately..
 export async function saveTheme(themeName) {
   if (!THEMES.includes(themeName)) return;
 
