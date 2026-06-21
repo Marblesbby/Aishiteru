@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aishiteru · Story</title>
+  <script>
+    (function(){
+      var t = localStorage.getItem('aishiteru_theme');
+      if (t) document.documentElement.setAttribute('data-pretheme', t);
+    })();
+  </script>
+  <link rel="stylesheet" href="../css/reset.css">
+  <link rel="stylesheet" href="../css/themes.css">
+  <link rel="stylesheet" href="../css/base.css">
+  <link rel="stylesheet" href="../css/components.css">
+  <link rel="stylesheet" href="../css/pages/chat.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
+</head>
+<body>
+
+  <div class="app-shell single-col chat-shell">
+
+    <header class="app-header">
+      <a href="/Aishiteru/pages/stories.html" class="back-btn">
+        <i class="ti ti-chevron-left" aria-hidden="true"></i> stories
+      </a>
+      <span class="logo" id="story-title" style="font-size:14px;">Story</span>
+      <a href="#" class="hdr-icon" id="info-link" title="Story info">
+        <i class="ti ti-info-circle" aria-hidden="true"></i>
+      </a>
+    </header>
+
+    <!-- Chapter tabs -->
+    <div class="chapter-bar" id="chapter-bar"></div>
+
+    <!-- Messages -->
+    <div class="chat-scroll" id="chat-scroll">
+      <div class="loading-state">Loading...</div>
+    </div>
+
+    <!-- Input -->
+    <div class="chat-input-area" id="input-area" style="display:none;">
+      <div class="chat-hint">
+        <span class="hint-a">*asterisks*</span> for actions ·
+        <span class="hint-s">"quotes"</span> for speech
+      </div>
+      <div class="chat-input-row">
+        <button class="persona-toggle" id="persona-toggle" title="Switch who you're posting as">
+          <span id="persona-icon">✨</span>
+        </button>
+        <textarea class="chat-textarea" id="chat-textarea" rows="1"
+          placeholder="Write..."></textarea>
+        <button class="chat-send" id="chat-send">
+          <i class="ti ti-send" aria-hidden="true"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Persona picker popup -->
+    <div class="persona-popup hidden" id="persona-popup"></div>
+
+    <!-- Message action menu popup -->
+    <div class="msg-menu hidden" id="msg-menu">
+      <button class="msg-menu-item" id="edit-msg-btn"><i class="ti ti-edit"></i> Edit</button>
+      <button class="msg-menu-item danger" id="delete-msg-btn"><i class="ti ti-trash"></i> Delete</button>
+    </div>
+
+  </div>
+
+  <script type="module" src="../js/pages/chat.js"></script>
+</body>
+</html>
