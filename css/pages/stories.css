@@ -1,0 +1,38 @@
+.stories-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 0 14px 10px;
+}
+
+/* Plus button in section header */
+.plus-btn {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: var(--ac);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border: none;
+  transition: opacity 0.15s;
+  flex-shrink: 0;
+}
+
+.plus-btn:hover { opacity: 0.85; }
+.plus-btn i { font-size: 16px; color: #fff; }
+
+/* Story card overrides for this page */
+.story-card {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 14px;
+  text-decoration: none;
+  color: inherit;
+}
+
+.story-card-inner {
+  display: contents;
+}

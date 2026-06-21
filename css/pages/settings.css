@@ -1,0 +1,71 @@
+.settings-section {
+  padding: 20px 16px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.settings-label {
+  font-size: 10px;
+  color: var(--muted);
+  letter-spacing: 0.08em;
+  font-family: 'Noto Serif JP', serif;
+}
+
+.theme-note {
+  font-size: 12px;
+  color: var(--muted);
+  background: var(--mid);
+  border-radius: 10px;
+  padding: 10px 12px;
+  line-height: 1.5;
+  border: 0.5px solid var(--border);
+}
+
+.theme-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  padding: 4px 0;
+}
+
+.swatch-col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+}
+
+.swatch-ring {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  border: 3px solid transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: border-color 0.15s, transform 0.15s;
+}
+
+.swatch-col:hover .swatch-ring {
+  transform: scale(1.08);
+}
+
+.swatch-col.selected .swatch-ring {
+  border-color: var(--dark);
+}
+
+.swatch-col.selected .swatch-ring::after {
+  content: '✓';
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.swatch-lbl {
+  font-size: 10px;
+  color: var(--muted);
+  text-align: center;
+  line-height: 1.3;
+}

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aishiteru · Settings</title>
+  <link rel="stylesheet" href="../css/reset.css">
+  <link rel="stylesheet" href="../css/themes.css">
+  <link rel="stylesheet" href="../css/base.css">
+  <link rel="stylesheet" href="../css/components.css">
+  <link rel="stylesheet" href="../css/pages/settings.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
+</head>
+<body>
+
+  <div class="app-shell">
+
+    <header class="app-header">
+      <span class="logo">Aishiteru</span>
+    </header>
+
+    <main class="page-content">
+
+      <div class="settings-section">
+        <div class="settings-label">YOUR THEME</div>
+        <div class="theme-note">Your theme is yours alone — your partner picks their own.</div>
+
+        <div class="theme-grid" id="theme-grid">
+          <div class="swatch-col" data-theme="haru_urara">
+            <div class="swatch-ring" style="background:#FA7395;"></div>
+            <div class="swatch-lbl">Haru Urara</div>
+          </div>
+          <div class="swatch-col" data-theme="teto">
+            <div class="swatch-ring" style="background:#d46a83;"></div>
+            <div class="swatch-lbl">Teto</div>
+          </div>
+          <div class="swatch-col" data-theme="brazilian_miku">
+            <div class="swatch-ring" style="background:#286a41;"></div>
+            <div class="swatch-lbl">Brazilian Miku</div>
+          </div>
+          <div class="swatch-col" data-theme="slice_of_life">
+            <div class="swatch-ring" style="background:#5F86CE;"></div>
+            <div class="swatch-lbl">Slice of Life</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="settings-section">
+        <div class="settings-label">DISPLAY NAME</div>
+        <div class="field-group">
+          <input class="field-input" type="text" id="display-name" placeholder="Your name">
+        </div>
+        <button class="btn-primary" id="save-name-btn" style="margin-top:10px;">
+          Save name
+        </button>
+      </div>
+
+      <div class="settings-section">
+        <button class="btn-outline" id="sign-out-btn">
+          <i class="ti ti-logout" aria-hidden="true"></i>
+          Sign out
+        </button>
+      </div>
+
+    </main>
+
+    <nav class="bottom-nav">
+      <a href="/Aishiteru/pages/stories.html" class="nav-item">
+        <i class="ti ti-books" aria-hidden="true"></i>
+        <span>stories</span>
+      </a>
+      <a href="/Aishiteru/pages/shelf.html" class="nav-item">
+        <i class="ti ti-library" aria-hidden="true"></i>
+        <span>shelf</span>
+      </a>
+      <a href="/Aishiteru/pages/settings.html" class="nav-item active">
+        <i class="ti ti-settings" aria-hidden="true"></i>
+        <span>settings</span>
+      </a>
+    </nav>
+
+  </div>
+
+  <script type="module" src="../js/pages/settings.js"></script>
+</body>
+</html>
