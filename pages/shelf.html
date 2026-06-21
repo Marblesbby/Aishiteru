@@ -14,6 +14,7 @@
   <link rel="stylesheet" href="../css/themes.css">
   <link rel="stylesheet" href="../css/base.css">
   <link rel="stylesheet" href="../css/components.css">
+  <link rel="stylesheet" href="../css/pages/shelf.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
 </head>
 <body>
@@ -43,20 +44,23 @@
       <div class="desktop-header">
         <span class="desktop-header-title">Bookshelf</span>
       </div>
-      <div class="empty-state" style="margin-top:40px;">
-        📚<br><br>
-        Your bookshelf is empty for now.<br>
-        Finish a story to add it here.
+
+      <!-- Tag filters -->
+      <div class="filter-bar" id="filter-bar"></div>
+
+      <!-- Book grid -->
+      <div class="book-grid" id="book-grid">
+        <div class="loading-state">Loading your shelf...</div>
       </div>
     </main>
 
+    <!-- Book detail / review modal -->
+    <div class="book-modal hidden" id="book-modal">
+      <div class="book-modal-card" id="book-modal-card"></div>
+    </div>
+
   </div>
 
-  <script type="module">
-    import { requireAuth } from '../js/auth.js';
-    import { applyTheme } from '../js/theme.js';
-    await requireAuth();
-    await applyTheme();
-  </script>
+  <script type="module" src="../js/pages/shelf.js"></script>
 </body>
 </html>
