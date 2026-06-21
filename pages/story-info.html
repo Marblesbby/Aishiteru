@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aishiteru · Story</title>
+  <script>
+    (function(){
+      var t = localStorage.getItem('aishiteru_theme');
+      if (t) document.documentElement.setAttribute('data-pretheme', t);
+    })();
+  </script>
+  <link rel="stylesheet" href="../css/reset.css">
+  <link rel="stylesheet" href="../css/themes.css">
+  <link rel="stylesheet" href="../css/base.css">
+  <link rel="stylesheet" href="../css/components.css">
+  <link rel="stylesheet" href="../css/pages/story-info.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
+</head>
+<body>
+
+  <div class="app-shell single-col">
+
+    <header class="app-header">
+      <a href="/Aishiteru/pages/stories.html" class="back-btn">
+        <i class="ti ti-chevron-left" aria-hidden="true"></i> stories
+      </a>
+      <span class="logo" id="header-title" style="font-size:14px;">Story</span>
+      <div class="hdr-spacer"></div>
+    </header>
+
+    <!-- Chapter tabs -->
+    <div class="chapter-bar" id="chapter-bar">
+      <div class="ch-tab info-tab active-ch">ⓘ info</div>
+    </div>
+
+    <main class="page-content no-nav">
+      <div class="info-body" id="info-body">
+        <div class="loading-state">Loading...</div>
+      </div>
+    </main>
+
+  </div>
+
+  <script type="module" src="../js/pages/story-info.js"></script>
+</body>
+</html>

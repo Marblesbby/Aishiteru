@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aishiteru · Propose a story</title>
+  <script>
+    // Instant theme — prevents flicker
+    (function(){
+      var t = localStorage.getItem('aishiteru_theme');
+      if (t) document.documentElement.setAttribute('data-pretheme', t);
+    })();
+  </script>
+  <link rel="stylesheet" href="../css/reset.css">
+  <link rel="stylesheet" href="../css/themes.css">
+  <link rel="stylesheet" href="../css/base.css">
+  <link rel="stylesheet" href="../css/components.css">
+  <link rel="stylesheet" href="../css/pages/propose.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
+</head>
+<body>
+
+  <div class="app-shell single-col">
+
+    <header class="app-header">
+      <a href="/Aishiteru/pages/stories.html" class="back-btn">
+        <i class="ti ti-chevron-left" aria-hidden="true"></i> stories
+      </a>
+      <span class="logo" style="font-size:15px;">Propose a story</span>
+      <div class="hdr-spacer"></div>
+    </header>
+
+    <main class="page-content no-nav">
+      <div class="propose-form">
+
+        <div class="field-group">
+          <label class="field-label">COVER EMOJI &amp; TITLE</label>
+          <div class="title-row">
+            <input class="emoji-input" type="text" id="cover-emoji" value="🌸" maxlength="2">
+            <input class="field-input" type="text" id="title" placeholder="Story title">
+          </div>
+        </div>
+
+        <div class="field-group">
+          <label class="field-label">SUMMARY</label>
+          <textarea class="field-textarea" id="summary" rows="3"
+            placeholder="What's this story about?"></textarea>
+        </div>
+
+        <div class="field-group">
+          <label class="field-label">STORY TAGS</label>
+          <div class="tag-editor" id="story-tags"></div>
+          <div class="tag-input-row">
+            <input class="field-input tag-text-input" type="text" id="story-tag-input"
+              placeholder="Add a tag (e.g. fantasy)">
+            <button class="btn-add-tag" id="add-story-tag">Add</button>
+          </div>
+        </div>
+
+        <div class="field-group">
+          <label class="field-label">CONTENT TAGS <span class="label-hint">(private)</span></label>
+          <div class="tag-editor" id="content-tags"></div>
+          <div class="tag-input-row">
+            <input class="field-input tag-text-input" type="text" id="content-tag-input"
+              placeholder="Add a content tag">
+            <button class="btn-add-tag" id="add-content-tag">Add</button>
+          </div>
+        </div>
+
+        <div class="field-group">
+          <label class="field-label">YOUR CHARACTER</label>
+          <div class="char-grid">
+            <input class="field-input" type="text" id="char-name" placeholder="Name">
+            <input class="field-input" type="text" id="char-age" placeholder="Age">
+            <input class="field-input" type="text" id="char-pronouns" placeholder="Pronouns">
+            <input class="field-input" type="text" id="char-likes" placeholder="Likes">
+            <input class="field-input" type="text" id="char-dislikes" placeholder="Dislikes">
+          </div>
+          <textarea class="field-textarea" id="char-description" rows="2"
+            placeholder="Visual description &amp; personality"></textarea>
+        </div>
+
+        <div class="field-group">
+          <label class="field-label">OPENING MESSAGE</label>
+          <p class="field-hint">
+            Use <span class="hint-a">*asterisks*</span> for actions and
+            <span class="hint-s">"quotes"</span> for speech.
+          </p>
+          <textarea class="field-textarea" id="opening-message" rows="4"
+            placeholder='*She stepped into the room.* "Hello..."'></textarea>
+        </div>
+
+        <div id="error-msg" class="error-msg hidden"></div>
+
+        <button class="btn-primary" id="send-proposal-btn">
+          💌 Send proposal
+        </button>
+
+      </div>
+    </main>
+
+  </div>
+
+  <script type="module" src="../js/pages/propose.js"></script>
+</body>
+</html>

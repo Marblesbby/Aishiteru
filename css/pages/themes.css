@@ -1,0 +1,80 @@
+/* ── HARU URARA ─────────────────────────────── */
+body.theme-haru_urara {
+  --ac:          #FA7395;
+  --ac2:         #ffd6e3;
+  --ac3:         #c44068;
+  --dark:        #3d0d1e;
+  --bg:          #fff5f8;
+  --mid:         #ffe0ea;
+  --border:      #f5c0cf;
+  --muted:       #a05060;
+  --txt:         #2d0a14;
+  --speech-col:  #c44068;
+  --action-col:  #FA7395;
+}
+
+/* ── TETO ────────────────────────────────────── */
+body.theme-teto {
+  --ac:          #d46a83;
+  --ac2:         #f4dfde;
+  --ac3:         #854462;
+  --dark:        #2a2433;
+  --bg:          #faf8fc;
+  --mid:         #ede0ee;
+  --border:      #c8b4c8;
+  --muted:       #9e8ba4;
+  --txt:         #2a2433;
+  --speech-col:  #854462;
+  --action-col:  #d46a83;
+}
+
+/* ── BRAZILIAN MIKU ──────────────────────────── */
+body.theme-brazilian_miku {
+  --ac:          #286a41;
+  --ac2:         #75c3b7;
+  --ac3:         #d5a043;
+  --dark:        #25274a;
+  --bg:          #f5fdf8;
+  --mid:         #d5f0e8;
+  --border:      #75c3b7;
+  --muted:       #507860;
+  --txt:         #1a2e20;
+  --speech-col:  #286a41;
+  --action-col:  #cd855b;
+}
+
+/* ── SLICE OF LIFE ───────────────────────────── */
+body.theme-slice_of_life {
+  --ac:          #5F86CE;
+  --ac2:         #ABD0F3;
+  --ac3:         #39456B;
+  --dark:        #303030;
+  --bg:          #F3F3F3;
+  --mid:         #e8eef8;
+  --border:      #ABD0F3;
+  --muted:       #A3A3B1;
+  --txt:         #39456B;
+  --speech-col:  #5F86CE;
+  --action-col:  #39456B;
+}
+
+/* ── FALLBACK (applied before DB theme loads) ── */
+body {
+  --ac:          #FA7395;
+  --ac2:         #ffd6e3;
+  --ac3:         #c44068;
+  --dark:        #3d0d1e;
+  --bg:          #fff5f8;
+  --mid:         #ffe0ea;
+  --border:      #f5c0cf;
+  --muted:       #a05060;
+  --txt:         #2d0a14;
+  --speech-col:  #c44068;
+  --action-col:  #FA7395;
+}
+
+/* ── PRE-THEME (applied via inline script before body renders) ── */
+html[data-pretheme="haru_urara"]    body { --ac:#FA7395; --ac2:#ffd6e3; --ac3:#c44068; --dark:#3d0d1e; --bg:#fff5f8; --mid:#ffe0ea; --border:#f5c0cf; --muted:#a05060; --txt:#2d0a14; --speech-col:#c44068; --action-col:#FA7395; }
+html[data-pretheme="teto"]          body { --ac:#d46a83; --ac2:#f4dfde; --ac3:#854462; --dark:#2a2433; --bg:#faf8fc; --mid:#ede0ee; --border:#c8b4c8; --muted:#9e8ba4; --txt:#2a2433; --speech-col:#854462; --action-col:#d46a83; }
+html[data-pretheme="brazilian_miku"] body { --ac:#286a41; --ac2:#75c3b7; --ac3:#d5a043; --dark:#25274a; --bg:#f5fdf8; --mid:#d5f0e8; --border:#75c3b7; --muted:#507860; --txt:#1a2e20; --speech-col:#286a41; --action-col:#cd855b; }
+html[data-pretheme="slice_of_life"] body { --ac:#5F86CE; --ac2:#ABD0F3; --ac3:#39456B; --dark:#303030; --bg:#F3F3F3; --mid:#e8eef8; --border:#ABD0F3; --muted:#A3A3B1; --txt:#39456B; --speech-col:#5F86CE; --action-col:#39456B; }
